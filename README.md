@@ -49,4 +49,4 @@ curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/maste
 - `--discovery-token-ca-cert-hash`: The hash of the CA cert for discovery (required for worker)
 - `--version`: The Kubernetes version to install (optional, example: 1.35)
 - `--with-flannel`: Whether to install Flannel as the CNI plugin (optional, default: false)
-- `--no-interactive`: Run the script in non-interactive mode (optional, default: false)
+- `--no-interactive`: Run the script in non-interactive mode
