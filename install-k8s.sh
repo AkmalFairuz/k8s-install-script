@@ -60,7 +60,7 @@ do
 done
 
 if [ -z "$K8S_VERSION" ]; then
-  K8S_VERSION="1.35.1"
+  K8S_VERSION="1.35"
 fi
 if [ -z "$K8S_HOSTNAME" ]; then
   echo "error: --hostname is required"

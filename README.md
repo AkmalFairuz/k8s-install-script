@@ -39,5 +39,5 @@ curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/maste
 - `--join-token`: The token to use for joining the cluster (required for worker)
 - `--master`: The address of the control plane to join (required for worker, example: 20.0.0.1:6443)
 - `--discovery-token-ca-cert-hash`: The hash of the CA cert for discovery (required for worker)
-- `--version`: The Kubernetes version to install (optional)
+- `--version`: The Kubernetes version to install (optional, example: 1.35)
 - `--with-flannel`: Whether to install Flannel as the CNI plugin (optional, default: false)
