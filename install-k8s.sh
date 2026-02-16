@@ -53,6 +53,7 @@ do
       ;;
     --with-flannel)
       K8S_WITH_FLANNEL=true
+      ;;
     *)
       ;;
   esac
