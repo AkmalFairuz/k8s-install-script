@@ -4,10 +4,16 @@ A Bash script to install Kubernetes on Ubuntu 24.04 or later nodes.
 
 ## Usage:
 
+- Interactive mode (recommended for beginners):
+```bash
+curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/master/install-k8s.sh | sudo bash
+```
+
 - To install Kubernetes on a single node (control-plane and worker):
 ```bash
 curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/master/install-k8s.sh | \
-    bash -s -- \
+    sudo bash -s -- \
+    --no-interactive \
     --hostname=k8s-node1 \
     --mode=control-plane-and-worker
 ```
@@ -15,7 +21,8 @@ curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/maste
 - To install Kubernetes on a control-plane node (without worker):
 ```bash
 curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/master/install-k8s.sh | \
-    bash -s -- \
+    sudo bash -s -- \
+    --no-interactive \
     --hostname=k8s-control-plane \
     --mode=control-plane
 ```
@@ -23,7 +30,8 @@ curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/maste
 - To install Kubernetes on a worker node and join it to an existing cluster:
 ```bash
 curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/master/install-k8s.sh | \
-    bash -s -- \
+    sudo bash -s -- \
+    --no-interactive \
     --hostname=k8s-worker1 \
     --mode=worker \
     --join-token=TOKEN \
@@ -41,3 +49,4 @@ curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/maste
 - `--discovery-token-ca-cert-hash`: The hash of the CA cert for discovery (required for worker)
 - `--version`: The Kubernetes version to install (optional, example: 1.35)
 - `--with-flannel`: Whether to install Flannel as the CNI plugin (optional, default: false)
+- `--no-interactive`: Run the script in non-interactive mode (optional, default: false)
