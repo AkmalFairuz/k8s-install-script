@@ -15,7 +15,8 @@ curl -sSL https://raw.githubusercontent.com/AkmalFairuz/k8s-install-script/maste
     sudo bash -s -- \
     --no-interactive \
     --hostname=k8s-node1 \
-    --mode=control-plane-and-worker
+    --mode=control-plane-and-worker \
+    --with-flannel
 ```
 
 - To install Kubernetes on a control-plane node (without worker):
